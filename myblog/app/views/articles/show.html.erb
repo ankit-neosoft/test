@@ -1,0 +1,17 @@
+<p>
+  <strong>Title: </strong><%= @article.title%>
+</p>
+<p>
+  <strong>Text: </strong><%= @article.text%>
+</p>
+<hr>
+<% @article.comments.each do |comment|%>
+ <p><strong>Commenter:</strong><%= comment.commenter %></p>
+  
+  <p><strong>Comment:</strong><%= comment.commenter %></p>
+  <hr>
+<% end %>
+<%= render 'comment'%>
+
+<%= link_to 'Back', articles_path%>
+<%= link_to 'Edit', edit_article_path%>
